@@ -1,17 +1,17 @@
 import React, { useState } from "react";
 import logo from "../../assets/assets/food-logo.png";
 import { FaCartShopping } from "react-icons/fa6";
-import { FaBars, FaTimes } from "react-icons/fa"; // Importing icons for hamburger
-import { Link } from "react-router-dom";
+import { FaBars, FaTimes, FaMoon, FaSun } from "react-icons/fa";
 
 function Navbar() {
-  const [isOpen, setIsOpen] = useState(false); // State for menu toggle
+  const [isOpen, setIsOpen] = useState(false);
+
+ 
 
   return (
     <div className="fixed top-0 left-0 w-full z-50 shadow-md md:py-5 py-3 bg-white dark:bg-gray-900 dark:text-white duration-200">
       <div className="container mx-auto py-3 sm:py-0 px-4">
         <div className="flex justify-between items-center font-bold">
-          {/* Logo */}
           <div>
             <a
               href="#"
@@ -22,7 +22,7 @@ function Navbar() {
           </div>
 
           {/* Desktop Menu */}
-          <ul className="hidden text-xl font-semibold gap-9   sm:flex space-x-6">
+          <ul className="hidden text-xl font-semibold gap-9 sm:flex space-x-6">
             <li>
               <a href="/" className="hover:text-blue-500">
                 Home
@@ -40,8 +40,9 @@ function Navbar() {
             </li>
           </ul>
 
+          
           {/* Order Button */}
-          <button className=" sm:flex hidden bg-yellow-400 text-white px-5 py-3 cursor-pointer font-semibold rounded flex items-center gap-2">
+          <button className="sm:flex hidden bg-yellow-400 text-white px-5 py-3 cursor-pointer font-semibold rounded flex items-center gap-2">
             Order
             <FaCartShopping className="text-xl text-white cursor-pointer" />
           </button>
@@ -51,7 +52,7 @@ function Navbar() {
             className="sm:hidden text-2xl"
             onClick={() => setIsOpen(!isOpen)}
           >
-            {isOpen ? <FaTimes /> : <FaBars />} {/* Toggle icons */}
+            {isOpen ? <FaTimes /> : <FaBars />}
           </button>
         </div>
 
@@ -92,7 +93,8 @@ function Navbar() {
                   Order Now
                   <FaCartShopping className="text-xl text-white cursor-pointer" />
                 </button>
-                </a>
+              </a>
+             
             </ul>
           </div>
         )}

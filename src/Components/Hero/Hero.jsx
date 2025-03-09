@@ -41,20 +41,21 @@ export default function Hero() {
           <div className="grid grid-cols-1 sm:grid-cols-2">
             {}
             <div className="flex flex-col justify-center gap-6   text-center sm:text-left mx-2 order-2 sm:order-1">
-              <h1 className="text-5xl sm:text-6xl lg:text-7xl  font-semibold ">
-                Welcome to the Foodie Zone
+              <h1 className="text-5xl  lg:text-6xl text-blue-950    font-medium ">
+                Welcome To The Foodie Zone
               </h1>
-              <p className="text-xs font flex flex-wrap md:flex-wrap md:text-base lg:text-lg   ">
+              <p className="text-base text-gray-600 font flex flex-wrap md:flex-wrap md:text-base lg:text-xl   ">
                 Welcome to our restaurant! Here, you will enjoy the finest and
                 most delicious food, a cozy atmosphere, and excellent service
                 that will make your dining experience truly memorable.
               </p>
 
-              <div>
-                <button className="bg-yellow-400 text-white px-4 py-2 font-semibold rounded-full  ">
-                  Order Now
-                </button>
-              </div>
+              <a href="#contact">
+  <button className="bg-yellow-400 cursor-pointer text-white px-5 py-3 font-semibold rounded">
+    Order Now
+  </button>
+</a>
+
             </div>
             {}
             <div className="order-1 sm:order-2 min-h-[450px] sm:min-h-[450px] flex justify-center items-center relative  ">

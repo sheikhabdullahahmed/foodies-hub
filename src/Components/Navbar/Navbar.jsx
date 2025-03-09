@@ -1,38 +1,78 @@
-import React from "react";
+import React, { useState } from "react";
 import logo from "../../assets/assets/food-logo.png";
 import { FaCartShopping } from "react-icons/fa6";
-import Button from "../Button/index";
-// import DarkMode from "../
+import { FaBars, FaTimes } from "react-icons/fa"; // Importing icons for hamburger
+import { Link } from "react-router-dom";
 
 function Navbar() {
+  const [isOpen, setIsOpen] = useState(false); // State for menu toggle
+
   return (
-    <div className=" shadow-md bg-white dark:bg-gray-900 dark:text-white duration-200 ">
-      <div className="container py-3 sm:py-0   ">
-        <div className="flex justify-between  items-center font-bold">
+    <div className="fixed top-0 left-0 w-full z-50 shadow-md md:py-5 py-3 bg-white dark:bg-gray-900 dark:text-white duration-200">
+      <div className="container mx-auto py-3 sm:py-0 px-4">
+        <div className="flex justify-between items-center font-bold">
+          {/* Logo */}
           <div>
             <a
               href="#"
-              className="flex justify-center  items-center gap-2 text-2xl sm:text-3xl"
+              className="flex items-center gap-2 text-2xl font-semibold sm:text-3xl"
             >
               <img src={logo} alt="foodie zone" className="w-10 mx-2" /> Foodie
             </a>
           </div>
-          <div className="flex  items-center text-center my-2  font-semibold gap-3">
-            <ul className="hidden sm:flex ">
+
+          {/* Desktop Menu */}
+          <ul className="hidden text-xl font-semibold gap-9   sm:flex space-x-6">
+            <li>
+              <a href="/" className="hover:text-blue-500">
+                Home
+              </a>
+            </li>
+            <li>
+              <a href="#contact" className="hover:text-blue-500">
+                Contact
+              </a>
+            </li>
+            <li>
+              <a href="#about" className="hover:text-blue-500">
+                About
+              </a>
+            </li>
+          </ul>
+
+          {/* Order Button */}
+          <button className=" sm:flex hidden bg-yellow-400 text-white px-5 py-3 cursor-pointer font-semibold rounded flex items-center gap-2">
+            Order
+            <FaCartShopping className="text-xl text-white cursor-pointer" />
+          </button>
+
+          {/* Mobile Menu Button (Hamburger Icon) */}
+          <button
+            className="sm:hidden text-2xl"
+            onClick={() => setIsOpen(!isOpen)}
+          >
+            {isOpen ? <FaTimes /> : <FaBars />} {/* Toggle icons */}
+          </button>
+        </div>
+
+        {/* Mobile Menu */}
+        {isOpen && (
+          <div className="sm:hidden absolute top-16 left-0 w-full bg-white dark:bg-gray-900 shadow-md">
+            <ul className="flex flex-col items-center space-y-4 py-4">
               <li>
                 <a
                   href="/"
-                  className="inline-block w-24 h-12 py-3 transition-all duration-300 ease-in-out 
-             hover:bg-blue-500 hover:text-white hover:border hover:rounded-2xl"
+                  className="hover:text-blue-500"
+                  onClick={() => setIsOpen(false)}
                 >
                   Home
                 </a>
-                </li>
-                <li>
+              </li>
+              <li>
                 <a
                   href="/contact"
-                  className="inline-block w-24 h-12 py-3 transition-all duration-300 ease-in-out 
-             hover:bg-blue-500 hover:text-white hover:border hover:rounded-2xl"
+                  className="hover:text-blue-500"
+                  onClick={() => setIsOpen(false)}
                 >
                   Contact
                 </a>
@@ -40,24 +80,22 @@ function Navbar() {
               <li>
                 <a
                   href="/about"
-                  className="inline-block w-24 h-12 py-3 transition-all duration-300 ease-in-out 
-             hover:bg-blue-500 hover:text-white hover:border hover:rounded-2xl"
+                  className="hover:text-blue-500"
+                  onClick={() => setIsOpen(false)}
                 >
                   About
                 </a>
               </li>
+              {/* Order Button in Mobile Menu */}
+              <a href="#contact">
+                <button className="bg-yellow-400 text-white px-5 py-3 cursor-pointer font-semibold rounded-full flex items-center gap-2">
+                  Order Now
+                  <FaCartShopping className="text-xl text-white cursor-pointer" />
+                </button>
+                </a>
             </ul>
-
-            <button
-              className="bg-yellow-400 text-white px-4 py-2 mx-3  font-semibold rounded-full  
-            flex item-center gap-2
-            "
-            >
-              Order
-              <FaCartShopping className=" md:text-base  text-xl  text-white   cursor-pointer" />
-            </button>
           </div>
-        </div>
+        )}
       </div>
     </div>
   );

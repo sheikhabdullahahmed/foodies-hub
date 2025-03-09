@@ -25,15 +25,15 @@ function Banner() {
 
             {/* {Text- content} */}
             <div className="flex flex-col   justify-center gap-6 mx-6 md:mx-4   sm:pt-5">
-              <h1 className="text-3xl lg:text-5xl md:text-3xl font-medium text-blue-950  ">
+              <h1 className="text-3xl lg:text-4xl md:text-3xl font-medium text-blue-950  ">
                 Savor The Flavor!{" "}
               </h1>
               <hr />
-              <p className="text-base lg:text-lg md:text-base text-gray-700 ">
+              <p className="text-base lg:text-base md:text-base text-gray-700 ">
                 We offer delicious food in a welcoming atmosphere, ensuring
                 every dining experience is memorable and enjoyable.
               </p>
-              <p className="text-base lg:text-lg ">
+              <p className="text-base lg:text-base ">
               Treat yourself to delicious meals prepared with the finest
               ingredients. Our cozy atmosphere is perfect for any occasion.
               Experience exceptional service and create lasting memories with

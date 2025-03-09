@@ -6,7 +6,7 @@ import Service from "./Components/Service/Service";
 import Banner from "./Components/Banner/Banner";
 import Contact from "./Components/Contact/Contac";
 import Footer from "./Components/Footer/Footer";
-import Card from './Components/Card/Card'; // Assuming Card component is in the 'Card' folder
+// import Card from './Components/Card/Card'; // Assuming Card component is in the 'Card' folder
 import ScrollToTopButton from "./Components/ScrollButton";
 
 function App() {
@@ -22,10 +22,7 @@ function App() {
         
         {/* All components are rendered here */}
 
-        <Routes>
-          {/* This route will render Card page when the /card path is accessed */}
-          <Route path="/card" component={Card} />
-          </Routes>
+       
 
         <Footer />
       </div>

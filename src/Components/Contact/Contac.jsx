@@ -37,12 +37,12 @@ const ContactUsPage = () => {
 
   return (
     <div className="w-full px-0 py-8 border-t-4 border-b-4 border-gray-300">
-      <h1 className="text-3xl lg:text-5xl font-medium text-center text-blue-950 mb-8">
+      <h1 className="text-3xl lg:text-4xl font-medium text-center text-blue-950 mb-8">
         Contact Us!
       </h1>
 
       <section className="text-center mb-8">
-        <p className="text-lg font-semibold text-gray-600 mt-4">
+        <p className="text-base font-semibold text-gray-600 mt-4">
           If you have any questions, feel free to reach out to us! We're here to
           assist you.
         </p>

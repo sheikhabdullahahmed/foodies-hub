@@ -71,7 +71,7 @@ function Navbar() {
               </li>
               <li>
                 <a
-                  href="/contact"
+                  href="#contact"
                   className="hover:text-blue-500"
                   onClick={() => setIsOpen(false)}
                 >
@@ -80,7 +80,7 @@ function Navbar() {
               </li>
               <li>
                 <a
-                  href="/about"
+                  href="#about"
                   className="hover:text-blue-500"
                   onClick={() => setIsOpen(false)}
                 >

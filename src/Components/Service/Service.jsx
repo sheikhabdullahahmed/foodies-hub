@@ -31,11 +31,11 @@ function Service() {
     <div id="about" className="container mx-auto">
       {/* Header Section */}
       <div  className="mb-16 mx-auto flex flex-col items-center text-center max-w-lg">
-        <p className="text-lg mt-5 lg:text-2xl bg-clip-text text-transparent text-yellow-500">
+        <p className="text-lg mt-5 lg:text-xl bg-clip-text text-transparent text-yellow-500">
           Our Service
         </p>
-        <h1 className="text-3xl lg:text-5xl text-blue-950 my-3 font-medium">Service</h1>
-        <p className="text-base lg:text-xl my-1 text-gray-600">
+        <h1 className="text-3xl lg:text-4xl text-blue-950 my-3 font-medium">Service</h1>
+        <p className="text-base lg:text-lg my-1 text-gray-600">
           Welcome to our restaurant! Here, you will enjoy the finest and most
           delicious food.
         </p>
@@ -59,11 +59,11 @@ function Service() {
                   />
                 </div>
                 <div className="p-4 group">
-  <h1 className="text-lg lg:text-2xl text-white font-semibold py-1 relative">
+  <h1 className="text-lg lg:text-xl text-white font-semibold py-1 relative">
     {name}
     <span className="absolute left-0 bottom-0 w-0 h-[2px] bg-white transition-all duration-300 group-hover:w-full"></span>
   </h1>
-  <p className="text-base lg:text-lg   text-white duration-300 line-clamp-2">
+  <p className="text-base lg:text-base   text-white duration-300 line-clamp-2">
     {description}
   </p>
 </div>

@@ -15,14 +15,14 @@ function Navbar() {
           <div>
             <a
               href="#"
-              className="flex items-center gap-2 text-2xl font-semibold sm:text-3xl"
+              className="flex items-center gap-2 text-2xl font-bold sm:text-3xl"
             >
               <img src={logo} alt="foodie zone" className="w-10 mx-2" /> Foodie
             </a>
           </div>
 
           {/* Desktop Menu */}
-          <ul className="hidden text-xl font-semibold gap-9 sm:flex space-x-6">
+          <ul className="hidden text-xl font-bold gap-9 sm:flex space-x-6">
             <li>
               <a href="/" className="hover:text-blue-500">
                 Home

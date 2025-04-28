@@ -41,7 +41,7 @@ export default function Hero() {
           <div className="grid grid-cols-1 sm:grid-cols-2">
             {}
             <div className="flex flex-col justify-center gap-6   text-center sm:text-left mx-2 order-2 sm:order-1">
-              <h1 className="text-5xl  lg:text-5xl text-blue-950    font-medium ">
+              <h1 className="text-5xl  lg:text-5xl text-blue-950    font-bold ">
                 Welcome To The Foodie Zone
               </h1>
               <p className="text-base text-gray-600 font flex flex-wrap md:flex-wrap md:text-base lg:text-lg   ">
@@ -51,11 +51,10 @@ export default function Hero() {
               </p>
 
               <a href="#contact">
-  <button className="bg-yellow-400 cursor-pointer text-white px-5 py-3 font-semibold rounded">
-    Order Now
-  </button>
-</a>
-
+                <button className="bg-yellow-400 cursor-pointer text-white px-5 py-3 font-semibold rounded">
+                  Order Now
+                </button>
+              </a>
             </div>
             {}
             <div className="order-1 sm:order-2 min-h-[450px] sm:min-h-[450px] flex justify-center items-center relative  ">
